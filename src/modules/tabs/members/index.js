@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { StatusBar } from 'react-native';
+import { MainContainer, PageContainer, PageHeader } from '../../../common/components';
+import { TAB } from '../../../common/constants';
 
 class Members extends Component {
     render() {
         return (
-            <View>
-                <Text>
-                    Members
-                </Text>
-            </View>
+            <MainContainer>
+                <StatusBar hidden={true} />
+                <PageContainer>
+                    <PageHeader title={TAB.MEMBERS} type={TAB.MEMBERS} right={true} left={true} onLeftPress={()=>console.log("programs left button pressed")}/>
+                </PageContainer>
+            </MainContainer>
         );
     }
 }

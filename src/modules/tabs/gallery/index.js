@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { StatusBar } from 'react-native';
+import { MainContainer, PageContainer, PageHeader } from '../../../common/components';
+import { TAB } from '../../../common/constants';
 
 class Gallery extends Component {
     render() {
         return (
-            <View>
-                <Text>
-                    Gallery
-                </Text>
-            </View>
+            <MainContainer>
+                    <StatusBar hidden={true} />
+                    <PageContainer>
+                        <PageHeader title={TAB.GALLERY} left={true} onLeftPress={()=>console.log("programs left button pressed")}/>
+                    </PageContainer>
+            </MainContainer>
         );
     }
 }
