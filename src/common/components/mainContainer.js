@@ -5,7 +5,7 @@ import { MARGIN_VALUE } from '../constants/'
 
 export const MainContainer = (props) => {
     return (
-        <View style={{flex: 1, backgroundColor:COLORS.LIGHT_BLUE}}>
+        <View style={{flex: 1, backgroundColor:COLORS.BACKGROUND_COLOR}}>
             {props.children}
         </View>
     );

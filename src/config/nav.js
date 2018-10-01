@@ -5,7 +5,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { COLORS, TAB } from '../common/constants';
 import { createBottomTabNavigator, createStackNavigator  } from 'react-navigation';
-import { Events, Forum, Gallery, Members, Programs } from '../modules/tabs';
+import { Events, Forum, Gallery, Members, Programs, ProgramDetail } from '../modules/tabs';
 
 
 const TabIcon=({focused, tintColor, iconName, type}) =>{
@@ -24,8 +24,19 @@ const TabIcon=({focused, tintColor, iconName, type}) =>{
     }
 }
 
+
+const ProgramStack = createStackNavigator({
+    'PROGRAMS_LIST': {screen: Programs},
+    'PROGRAM_DETAIL': {screen: ProgramDetail,}
+},{
+    navigationOptions:{
+        header:null,
+        // tabBarVisible: false
+    }
+})
+
 const TabNavs = createBottomTabNavigator({
-    'PROGRAMS': { screen: Programs, navigationOptions:{ tabBarIcon: ({focused, tintColor})=> <TabIcon type={TAB.PROGRAMS} focused={focused} tintColor={tintColor} iconName='grid'/> }},
+    'PROGRAMS': { screen: ProgramStack, navigationOptions:{ tabBarIcon: ({focused, tintColor})=> <TabIcon type={TAB.PROGRAMS} focused={focused} tintColor={tintColor} iconName='grid'/> }},
     'MEMBERS': { screen: Members, navigationOptions:{ tabBarIcon: ({focused, tintColor})=> <TabIcon type={TAB.MEMBERS} focused={focused} tintColor={tintColor} iconName='user'/> }},
     'EVENTS': { screen: Events, navigationOptions:{ tabBarIcon: ({focused, tintColor})=> <TabIcon type={TAB.EVENTS} focused={focused} tintColor={tintColor} iconName='calendar'/> }},
     'GALLERY': { screen: Gallery, navigationOptions:{ tabBarIcon: ({focused, tintColor})=> <TabIcon type={TAB.GALLERY} focused={focused} tintColor={tintColor} iconName='image'/> }},

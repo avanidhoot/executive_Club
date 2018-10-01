@@ -3,14 +3,14 @@ import { View, TouchableOpacity, Text } from 'react-native';
 import { Left, Body, Right } from 'native-base';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { DIMENSION_VALUE, COLORS, TAB } from '../../common/constants'
+import { DIMENSION_VALUE, COLORS, TAB, BUTTON_TYPE } from '../../common/constants'
 
 const headerHeight = DIMENSION_VALUE.HEIGHT/10;
 
 const Header = (props) => {
     let leftButton, rightButton ;
     leftButton = props.left ? <TouchableOpacity onPress={()=>props.onLeftPress()}>
-                                <FeatherIcon style={{fontWeight:'bold'}} size={20} color={COLORS.DARK_BLUE} name={'align-left'}/>
+                                {LeftIcon(props.leftButtonType)}
                               </TouchableOpacity>                                
                             : null;
     rightButton = props.right ?  <TouchableOpacity onPress={()=>onRightPress()}>                                    
@@ -21,10 +21,10 @@ const Header = (props) => {
     return (
         <View style={{flexDirection: 'row',height: headerHeight}}>
             <Left> 
-                {leftButton} 
-            </Left>            
+                {leftButton}
+            </Left>
             <Body>
-                <Text style={{fontSize:18,color:COLORS.DARK_BLUE}}>
+                <Text style={{fontSize:16,color:COLORS.DARK_BLUE}}>
                     {props.title}
                 </Text>
             </Body>    
@@ -34,6 +34,15 @@ const Header = (props) => {
         </View>
     );
 };
+
+function LeftIcon (type='') {
+    switch(type){
+        case BUTTON_TYPE.BACK:
+            return <FeatherIcon style={{fontWeight:'bold'}} size={20} color={COLORS.DARK_BLUE} name={'arrow-left'}/>
+        case BUTTON_TYPE.EXPAND:
+            return <FeatherIcon style={{fontWeight:'bold'}} size={20} color={COLORS.DARK_BLUE} name={'align-left'}/>
+    }
+}
 
 function RigtIcon (type='') {
     switch(type) {
