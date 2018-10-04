@@ -4,8 +4,7 @@ import programService from '../../programs/service';
 
 class ProgramDetail extends Component {
     static navigationOptions = {
-        header: null,
-        tabBarVisible:true // if i place false here the tabBar is invisible on all screens in below specified stack.
+        tabBarVisible: false,
     };
     state = { program: {} }
     async componentWillMount() {    

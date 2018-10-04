@@ -28,12 +28,18 @@ const TabIcon=({focused, tintColor, iconName, type}) =>{
 const ProgramStack = createStackNavigator({
     'PROGRAMS_LIST': {screen: Programs},
     'PROGRAM_DETAIL': {screen: ProgramDetail,}
-},{
-    navigationOptions:{
-        header:null,
-        // tabBarVisible: false
+}, { navigationOptions: { header: null }})
+
+ProgramStack.navigationOptions = ({ navigation }) => {
+    let tabBarVisible = true;
+    if (navigation.state.index > 0) {
+      tabBarVisible = false;
     }
-})
+  
+    return {
+      tabBarVisible,
+    };
+};
 
 const TabNavs = createBottomTabNavigator({
     'PROGRAMS': { screen: ProgramStack, navigationOptions:{ tabBarIcon: ({focused, tintColor})=> <TabIcon type={TAB.PROGRAMS} focused={focused} tintColor={tintColor} iconName='grid'/> }},
