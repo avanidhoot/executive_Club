@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, TouchableOpacity, Text } from 'react-native';
+import { View, TouchableOpacity, Text, Platform } from 'react-native';
 import { Left, Body, Right } from 'native-base';
 import FeatherIcon from 'react-native-vector-icons/Feather';
+import EntypoIcons from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { DIMENSION_VALUE, COLORS, TAB, BUTTON_TYPE } from '../../common/constants'
 
@@ -38,7 +39,7 @@ const Header = (props) => {
 function LeftIcon (type='') {
     switch(type){
         case BUTTON_TYPE.BACK:
-            return <FeatherIcon style={{fontWeight:'bold'}} size={20} color={COLORS.DARK_BLUE} name={'arrow-left'}/>
+            return Platform.OS == 'ios' ? <EntypoIcons style={{fontWeight:'bold'}} size={20} color={COLORS.DARK_BLUE} name={'chevron-left'}/> : <FeatherIcon style={{fontWeight:'bold'}} size={20} color={COLORS.DARK_BLUE} name={'arrow-left'}/>
         case BUTTON_TYPE.EXPAND:
             return <FeatherIcon style={{fontWeight:'bold'}} size={20} color={COLORS.DARK_BLUE} name={'align-left'}/>
     }
