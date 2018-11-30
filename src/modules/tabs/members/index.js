@@ -20,14 +20,16 @@ class Members extends Component {
                     : <Member_List data={NonExecutive_Member}/>
         return (
             <MainContainer>
-                <StatusBar hidden={true} />
+                <StatusBar hidden={false} backgroundColor={COLORS.DARK_BLUE} />
                 <PageContainer>
                     <PageHeader title={TAB.MEMBERS} 
                         type={TAB.MEMBERS} 
                         leftButtonType={BUTTON_TYPE.EXPAND}
+                        rightButtonType={BUTTON_TYPE.MESSAGE}
                         right={true} 
                         left={true} 
-                        onLeftPress={()=>console.log("programs left button pressed")}/>                    
+                        onLeftPress={()=>console.log("programs left button pressed")}
+                        onRightPress={()=>console.log("programs right button pressed")}/>
                 </PageContainer>
                 <Segment style={{borderRadius: 8, marginHorizontal: MARGIN_VALUE.BASE_VALUE, height: 30 }}>
                         <Button style={{flex: 1, justifyContent: 'center',borderColor: COLORS.DARK_BLUE, borderWidth: 1,  backgroundColor: this.state.activeSegment == SEGMENT.EXECUTIVE ? COLORS.DARK_BLUE : COLORS.WHITE, borderTopLeftRadius:8, borderBottomLeftRadius:8}} first onPress={()=>this.setState({activeSegment:SEGMENT.EXECUTIVE})} >

@@ -1,7 +1,7 @@
 package com.execlub;
 
 import android.app.Application;
-
+import com.reactnativecomponent.splashscreen.RCTSplashScreenPackage;    //import package
 import com.facebook.react.ReactApplication;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactNativeHost;
@@ -24,7 +24,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new VectorIconsPackage()
+          new RCTSplashScreenPackage(),    //register Module
+          new VectorIconsPackage()
       );
     }
 
@@ -44,4 +45,6 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
   }
+
 }
+
