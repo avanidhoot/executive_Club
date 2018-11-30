@@ -29,7 +29,7 @@ class Programs extends Component {
                     showsVerticalScrollIndicator={false}
                     style={{marginHorizontal: MARGIN_VALUE.FIVE}}
                     keyExtractor ={ (item, index) => item.id}
-                    ItemSeparatorComponent={()=><View style={{height: MARGIN_VALUE.TEN}}></View>}
+                    ItemSeparatorComponent={()=><View style={{height: MARGIN_VALUE.FIVE}}></View>}
                     data={this.state.programs}
                     renderItem={({item}) => <ProgramCard program={item} onDetailPress={(program)=>this.handleDetailPress(program)} />}
                     />
@@ -37,13 +37,17 @@ class Programs extends Component {
         return (
             <React.Fragment>
                 <MainContainer>
-                    <StatusBar hidden={true} />
+                    <StatusBar hidden={false} backgroundColor={COLORS.DARK_BLUE}/>
                     <PageContainer>
                         <PageHeader 
                             title={TAB.PROGRAMS} 
                             leftButtonType={BUTTON_TYPE.EXPAND}
-                            left={true} 
-                            onLeftPress={()=>console.log("programs left button pressed")}/>
+                            rightButtonType={BUTTON_TYPE.DOTS}
+                            left={true}
+                            right={true}
+                            onLeftPress={()=>console.log("programs left button pressed")}
+                            onRightPress={()=>console.log("programs right button pressed")}
+                        />
                         {prg}
                     </PageContainer>
                 </MainContainer>
@@ -55,15 +59,16 @@ class Programs extends Component {
 const ProgramCard = (props) => {
     const program = props.program;
     return(
-        <View style={{height:150, flexDirection:'row', backgroundColor:COLORS.WHITE}}>            
-            <Image style={{flex: 1,height:150}} source={{uri:program.img_url}} />
+        <View style={{height:250,  backgroundColor:COLORS.WHITE, marginLeft:10, marginRight: 10}}>
+            <Image style={{flex: 1,height:200, marginTop:5}} source={{uri:program.img_url}} />
             <View style={{flex: 1, marginLeft: 10}}>
-                <Text ellipsizeMode={'tail'} numberOfLines={2} style={{fontSize:14, fontWeight:'bold'}}>{program.title}</Text>
-                <Text style={{fontSize:12}}>{program.date}</Text>
-                <Text style={{fontSize:12}}>{program.location}</Text>
-                <TouchableOpacity onPress={()=>props.onDetailPress(program)} style={{height:30,justifyContent:'center', alignItems:'center', width:80, backgroundColor:COLORS.DARK_BLUE, borderRadius: 5, marginTop:5 }}>
-                    <Text style={{color:COLORS.WHITE}}> Register </Text>
-                </TouchableOpacity>
+                <Text ellipsizeMode={'tail'} numberOfLines={2} style={{fontSize:16, fontWeight:'bold',marginTop:10}}>{program.title}</Text>
+                <View style={{flex: 1,flexDirection: 'row',marginTop:10}}>
+                    <Text style={{fontSize:14, color:COLORS.GREY,fontWeight:'bold'}}>On {program.date}</Text>
+                    <TouchableOpacity onPress={()=>props.onDetailPress(program)} style={{height:20,justifyContent:'center',alignItems:'center', width:80}}>
+                        <Text style={{fontSize:14, color:COLORS.GREY, fontWeight:'bold'}}> Register </Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         </View>
     )

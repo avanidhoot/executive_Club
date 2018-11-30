@@ -1,8 +1,12 @@
 <resources>
-
+    <!--<color name="red">#d4b005</color>-->
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/mudyellow</item>
+
+
     </style>
 
 </resources>

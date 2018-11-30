@@ -1,6 +1,6 @@
 import React from 'react';
 import { MainContainer, PageContainer, PageHeader, MemberCard } from '../../../../common/components';
-import { View, Text, Image, FlatList } from 'react-native';
+import { View, Text, Image, FlatList,Button } from 'react-native';
 import { Container, Content } from 'native-base';
 import { BUTTON_TYPE, COLORS, MARGIN_VALUE } from '../../../../common/constants/';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
@@ -19,16 +19,49 @@ const Programdetail = (props) => {
             <PageContainer>
                 <PageHeader 
                     onLeftPress={()=>props.navigation.goBack()}
+                    onRightPress={()=>console.log("programs right button pressed")}
                     leftButtonType={BUTTON_TYPE.BACK}
-                    back={true} left={true} title="PROGRAM"/>                
+                    rightButtonType ={BUTTON_TYPE.DOTS}
+                    back={true} left={true} right={true} title="PROGRAMS"/>
             </PageContainer>
-            <Content showsVerticalScrollIndicator={true} style={{contentContainerStyle: {flex:1} }}>
-                    <SpeakerList speakers={props.program.speaker}/>
-                    <ProgramVenueDetails program={props.program} />
-                    <View style={{backgroundColor:COLORS.WHITE,marginHorizontal:0}}>
+            <Content marginLeft={MARGIN_VALUE.BASE_VALUE} marginRight={MARGIN_VALUE.BASE_VALUE} style={{contentContainerStyle: {flex:1} }}>
+                    {/*<SpeakerList speakers={props.program.speaker}/>*/}
+                <Image style={{flex: 1,height:150, marginTop:5}} source={{uri:props.program.img_url}} />
+                <Text numberOfLines={2} style={{fontSize:16, fontWeight:'bold',marginTop:10}}>{props.program.title}</Text>
+                <View style={{flex: 1, flexDirection:'row',marginTop:MARGIN_VALUE.TEN}}>
+                    <View  style={{flex: 1, flexDirection:'row'}}>
+                        <View style={{backgroundColor:COLORS.DARK_GREY,padding:10, marginRight: 10}}>
+                            <FontAwesomeIcon size={18} color={COLORS.WHITE} name={'calendar'} style={{justifyContent:'center'}}/>
+                        </View>
+                        <Text style={{flex: 1, flexWrap: 'wrap', color: COLORS.GREY}}>{props.program.date}</Text>
+                    </View>
+                    <View style={{flex: 1, flexDirection:'row'}}>
+                        <View style={{backgroundColor:COLORS.DARK_GREY, padding:10, marginRight: 10}}>
+                            <FontAwesomeIcon size={18} color={COLORS.WHITE} name={'clock-o'} style={{justifyContent:'center'}}/>
+                        </View>
+                        <Text style={{flex: 1, flexWrap: 'wrap', color: COLORS.GREY}}>{props.program.time}</Text>
+                    </View>
+                </View>
+                <View style={{flex: 1, flexDirection:'row', marginTop:MARGIN_VALUE.TEN}}>
+                    <View style={{flex: 1, flexDirection:'row'}}>
+                        <View style={{backgroundColor:COLORS.DARK_GREY,padding:10, marginRight: 10}}>
+                            <FontAwesomeIcon size={18} color={COLORS.WHITE} name={'clock-o'} style={{justifyContent:'center'}}/>
+                        </View>
+                        <Text style={{flex: 1, flexWrap: 'wrap', color: COLORS.GREY}}>{props.program.duration}</Text>
+                    </View>
+                    <View style={{flex: 1, flexDirection:'row'}}>
+                        <View style={{backgroundColor:COLORS.DARK_GREY, padding:12, marginRight: 10}}>
+                            <FontAwesomeIcon size={18} color={COLORS.WHITE} name={'map-marker'} style={{justifyContent:'center'}}/>
+                        </View>
+                        <Text style={{flex: 1, flexWrap: 'wrap', color: COLORS.GREY}}>{props.program.location}</Text>
+                    </View>
+                </View>
+                {/*<ProgramVenueDetails program={props.program} />*/}
+                    <View style={{backgroundColor:COLORS.WHITE,marginTop:MARGIN_VALUE.BASE_VALUE}}>
                         <ProgramDescription description={props.program.description}/>
                         <ProgramPricing />
                     </View>
+                <Button color={COLORS.DARK_BLUE} title={"Register"} onPress={()=>console.log("Register")}/>
             </Content>    
         </Container>
     );
@@ -73,8 +106,8 @@ const VenueItem = (props) => {
 const ProgramDescription = (props) =>{
     return(
         <View>
-            <Text style={{color:COLORS.DARK_BLUE}}> Description </Text>
-            <Text style={{textAlign:'justify', marginHorizontal: 5}}>
+            <Text style={{fontWeight: 'bold', fontSize:16, marginBottom: MARGIN_VALUE.FIVE}}> Description </Text>
+            <Text style={{textAlign:'justify', marginHorizontal: 5, color:COLORS.GREY}}>
                 {props.description}
             </Text>
         </View>
@@ -83,42 +116,57 @@ const ProgramDescription = (props) =>{
 
 const ProgramPricing = (props) => {
     return(
-        <View style={{flex:1,marginHorizontal:10, marginBottom: 5}}>
-            <View style={{flexDirection:'row', flex: 3}}>                
-                <View>
-                    <View style={{height: 30, width: 80,marginTop:5}}>
-
-                    </View>
-                    <View style={{height: 30, width: 80, backgroundColor: COLORS.LIGHT_BLUE, alignItems:'center'}}>
-                            <Text>
-                                TICKETS
-                            </Text>
-                    </View>
-                    <View style={{height: 30, width: 80, backgroundColor: COLORS.LIGHT_BLUE, marginTop: 5, alignItems:'center'}}>
-                        <Text>
-                            TABLE
+        <View style={{flex:1,marginTop:MARGIN_VALUE.BASE_VALUE,marginBottom: MARGIN_VALUE.TEN}}>
+            <View style={{marginLeft:5,flex:3,flexDirection:'row',marginTop:MARGIN_VALUE.FIVE}}>
+                <View style={{height: 20, width: 80}}/>
+                <View style={{ alignItems:'center',flex:1, marginRight:10, backgroundColor:COLORS.DARK_GREY}}>
+                        <Text style={{color:COLORS.WHITE}}>
+                            Member
                         </Text>
-                    </View>
                 </View>
-                <View style={{marginLeft:5,flex:7}}>
-                        <View style={{height: 30, width: 80,marginTop:5}}>
+                <View style={{alignItems:'center',flex:1, backgroundColor:COLORS.DARK_GREY}}>
+                        <Text style={{color:COLORS.WHITE}}>
+                            Non-Member
+                        </Text>
+                </View>
+            </View>
+            <View style={{marginLeft:5,flex:3,flexDirection:'row',marginTop:MARGIN_VALUE.TEN}}>
+                <View style={{height: 20, width: 80}}>
+                    <Text>
+                        Tickets
+                    </Text>
+                </View>
+                <View style={{ alignItems:'center',flex:1, marginRight:10}}>
+                    <Text>
+                       $166
+                    </Text>
+                </View>
+                <View style={{alignItems:'center',flex:1}}>
+                    <Text>
+                        $1222
+                    </Text>
+                </View>
+            </View>
+            <View style={{marginLeft:5,flex:3,flexDirection:'row',marginTop:MARGIN_VALUE.TEN}}>
+                <View style={{height: 20, width: 80}}>
+                    <Text>
+                        Table
+                    </Text>
+                </View>
+                <View style={{ alignItems:'center',flex:1, marginRight:10}}>
+                    <Text >
+                        $199
+                    </Text>
+                </View>
+                <View style={{alignItems:'center',flex:1}}>
+                    <Text>
+                        $44
+                    </Text>
+                </View>
+            </View>
 
-                        </View>
-                        <View style={{flexDirection:'row',height: 30,flex:1}}>
-                            <View style={{ alignItems:'center',flex:1}}>
-                                    <Text>
-                                        $99 
-                                    </Text>
-                            </View>
-                            <View style={{alignItems:'center',flex:1}}>
-                                <Text>
-                                    $159
-                                </Text>
-                            </View>
-                        </View>
-                </View>
-            </View>         
         </View>
+
     )
 }
 

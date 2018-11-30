@@ -13,7 +13,7 @@ export const MainContainer = (props) => {
 
 export const PageContainer = (props) => {
     return(
-        <View style={{ marginHorizontal: MARGIN_VALUE.TEN}}>
+        <View>
             {props.children}
         </View>
     )

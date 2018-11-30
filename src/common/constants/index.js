@@ -1,10 +1,12 @@
 import { Dimensions } from 'react-native';
 
 export const COLORS = {
-    'BACKGROUND_COLOR':'#F0F8FF',
-    'LIGHT_BLUE':'#BBDFFC',    
-    'DARK_BLUE':'#4B85C7',
+    'BACKGROUND_COLOR':'#FFFFFF',
+    'LIGHT_BLUE':'#d4b005',
+    'DARK_BLUE':'#d4b005',
     'WHITE':'#FFFFFF',
+    'GREY' : '#b1afc0',
+    'DARK_GREY' :'#5f5d70',
 }
 
 export const TAB = {
@@ -23,10 +25,13 @@ export const DIMENSION_VALUE = {
 export const MARGIN_VALUE = {
     BASE_VALUE: 15,
     FIVE: 5,
-    TEN: 10
+    TEN: 10,
+    TWENTY:20
 }
 
 export const BUTTON_TYPE = {
     BACK: 'BACK',
-    EXPAND: 'EXPAND'
+    EXPAND: 'EXPAND',
+    DOTS: 'DOTS',
+    MESSAGE: 'MESSAGE'
 }

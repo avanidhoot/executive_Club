@@ -7,6 +7,7 @@ export const programs = [
         'title':'Imagine it Forward: Courage, Creativity and the Power of Change',
         'date': 'Wednesday, September 26, 2018  ',
         'time': '11:15 a.m. – 1:15 p.m.',
+        'duration':'02 Hours',
         'location': 'Standard Club',
     },
     {
@@ -15,6 +16,7 @@ export const programs = [
         'title':'Design Matters: Battling Big-Company Mindset',
         'date': 'Thursday, September 27, 2018',
         'time': '11:15 a.m. – 1:15 p.m.',
+        'duration':'02 Hours',
         'location': 'Hyatt Regency Chicago',    
     },
     {
@@ -31,6 +33,7 @@ export const programs = [
         'title': 'From Grantmaker to Changemaker: A New Direction for Helping Chicago',
         'date': 'Thursday, October 11, 2018  ',
         'time': '11:15 a.m. – 1:15 p.m.',
+        'duration':'02 Hours',
         'location': 'Hilton Chicago',        
     },
     {
@@ -39,6 +42,7 @@ export const programs = [
         'title':'The Chicago Regions Transit Future Civic Affairs Forum',
         'date': 'Tuesday, October 16, 2018  ',
         'time': '5:30 p.m. – 7:00 p.m.',
+        'duration':'01:30 Hours',
         'location': 'HermanMiller',
     },
     {
@@ -47,6 +51,7 @@ export const programs = [
         'title': 'Leading, Activating, and Sustaining Change Talent Development Forum',
         'date':' Tuesday, October 23, 2018  ',
         'time':' 7:30 a.m. –9:00 a.m.',
+        'duration':'01:30 Hours',
         'location':' TBD',
     },
 ]
