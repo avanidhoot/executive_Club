@@ -63,13 +63,13 @@ const TabNavs = createBottomTabNavigator({
 export default class App extends Component{
     componentDidMount () {
         //SplashScreen.close(SplashScreen.animationType.scale, 850, 500)
-        SplashScreen.close({
-            animationType: SplashScreen.animationType.fade,
-            duration: 550,
-            delay: 500,
-            height:100,
-            width:100
-        })
+        //SplashScreen.close({
+          //  animationType: SplashScreen.animationType.fade,
+            //duration: 550,
+            //delay: 500,
+            //height:100,
+            //width:100
+        //})
     }
     render() {
         return (

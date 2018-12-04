@@ -8,7 +8,7 @@ const Members = (props) => {
         <FlatList
             data={props.data}
             numColumns={2}
-            ItemSeparatorComponent={()=><View style={{height:5}}/>}
+            ItemSeparatorComponent={()=><View style={{height:10}}/>}
             renderItem={({item})=><MemberCard imgVariant={{height: 130, width: 150}} variant={{width: 150, marginLeft:MARGIN_VALUE.TEN, marginTop:MARGIN_VALUE.FIVE}} member={item}/>}
         />
     );

@@ -56,7 +56,7 @@ const EventList = (props) =>{
 const EventCard = (props) => {
     return(
         <View style={{marginTop:MARGIN_VALUE.TWENTY}}>
-                <Image style={{flex: 1,height:180}} source={{uri:'http://www.executivesclub.org/images/default-source/calendars/september-26-calendar-01.png?sfvrsn=0&MaxWidth=140&MaxHeight=&ScaleUp=false&Quality=High&Method=ResizeFitToAreaArguments&Signature=A77796519CD06584D8B8805DCD6B047D0FB9E455'}} />
+                <Image style={{flex: 1,height:180}} source={{uri:'https://www.baymillscasinos.com/wp-content/uploads/2016/11/7.jpg'}} />
                 <View style={{marginLeft: MARGIN_VALUE.TEN, marginTop:MARGIN_VALUE.FIVE}}>
                     <View style={{flex: 1}}><Text style={{fontSize:16, fontWeight:'bold',marginTop:10}}>From Grantmaker to Changemaker: A New Direction for Helping Chicago</Text></View>
                     <View style={{flex: 1}}><Text style={{color: COLORS.GREY, fontWeight:'bold'}} >11:15 a.m. – 1:15 p.m.</Text></View>

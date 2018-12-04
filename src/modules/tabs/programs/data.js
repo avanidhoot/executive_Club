@@ -3,8 +3,7 @@ const img_base_url = 'http://www.executivesclub.org'
 export const programs = [
     {
         'id':'001',        
-        'img_url': img_base_url+'/images/default-source/calendars/september-26-calendar-01.png?sfvrsn=0&MaxWidth=140&MaxHeight=&ScaleUp=false&Quality=High&Method=ResizeFitToAreaArguments&Signature=A77796519CD06584D8B8805DCD6B047D0FB9E455',
-        'title':'Imagine it Forward: Courage, Creativity and the Power of Change',
+         'img_url':'https://www.baymillscasinos.com/wp-content/uploads/2016/11/7.jpg',        'title':'Imagine it Forward: Courage, Creativity and the Power of Change',
         'date': 'Wednesday, September 26, 2018  ',
         'time': '11:15 a.m. – 1:15 p.m.',
         'duration':'02 Hours',
@@ -12,7 +11,7 @@ export const programs = [
     },
     {
         'id':'002',        
-        'img_url': img_base_url+'/images/default-source/calendars/september-26-calendar-01.png?sfvrsn=0&MaxWidth=140&MaxHeight=&ScaleUp=false&Quality=High&Method=ResizeFitToAreaArguments&Signature=A77796519CD06584D8B8805DCD6B047D0FB9E455',
+         'img_url':'https://www.aiche.org/sites/default/files/styles/aiche_content/public/images/conference/event/global_images_professional-group-meeting-ssk_95466664_1.jpg?itok=jQE_RlHm',
         'title':'Design Matters: Battling Big-Company Mindset',
         'date': 'Thursday, September 27, 2018',
         'time': '11:15 a.m. – 1:15 p.m.',
@@ -21,7 +20,7 @@ export const programs = [
     },
     {
         'id':'003',        
-        'img_url': img_base_url+'/images/default-source/calendars/september-26-calendar-01.png?sfvrsn=0&MaxWidth=140&MaxHeight=&ScaleUp=false&Quality=High&Method=ResizeFitToAreaArguments&Signature=A77796519CD06584D8B8805DCD6B047D0FB9E455',
+        'img_url':'https://www.baymillscasinos.com/wp-content/uploads/2016/11/7.jpg',
         'title':'Introduction to the Hatchery Chicago Food and Beverage Forum',
         'date': 'Wednesday, October 3, 2018  ',
         'time': '8:00 a.m. – 9:30 p.m.',
@@ -29,7 +28,7 @@ export const programs = [
     },
     {
         'id':'004',
-        'img_url': img_base_url+'/images/default-source/calendars/september-26-calendar-01.png?sfvrsn=0&MaxWidth=140&MaxHeight=&ScaleUp=false&Quality=High&Method=ResizeFitToAreaArguments&Signature=A77796519CD06584D8B8805DCD6B047D0FB9E455',
+         'img_url':'https://www.baymillscasinos.com/wp-content/uploads/2016/11/7.jpg',
         'title': 'From Grantmaker to Changemaker: A New Direction for Helping Chicago',
         'date': 'Thursday, October 11, 2018  ',
         'time': '11:15 a.m. – 1:15 p.m.',
@@ -38,7 +37,7 @@ export const programs = [
     },
     {
         'id':'005',
-        'img_url': img_base_url+'/images/default-source/calendars/september-26-calendar-01.png?sfvrsn=0&MaxWidth=140&MaxHeight=&ScaleUp=false&Quality=High&Method=ResizeFitToAreaArguments&Signature=A77796519CD06584D8B8805DCD6B047D0FB9E455',
+         'img_url':'https://www.baymillscasinos.com/wp-content/uploads/2016/11/7.jpg',
         'title':'The Chicago Regions Transit Future Civic Affairs Forum',
         'date': 'Tuesday, October 16, 2018  ',
         'time': '5:30 p.m. – 7:00 p.m.',
@@ -47,7 +46,7 @@ export const programs = [
     },
     {
         'id':'006',
-        'img_url': img_base_url+'/images/default-source/calendars/september-26-calendar-01.png?sfvrsn=0&MaxWidth=140&MaxHeight=&ScaleUp=false&Quality=High&Method=ResizeFitToAreaArguments&Signature=A77796519CD06584D8B8805DCD6B047D0FB9E455',
+        'img_url': 'https://www.aiche.org/sites/default/files/styles/aiche_content/public/images/conference/event/global_images_professional-group-meeting-ssk_95466664_1.jpg?itok=jQE_RlHm',
         'title': 'Leading, Activating, and Sustaining Change Talent Development Forum',
         'date':' Tuesday, October 23, 2018  ',
         'time':' 7:30 a.m. –9:00 a.m.',

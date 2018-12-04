@@ -59,8 +59,8 @@ class Programs extends Component {
 const ProgramCard = (props) => {
     const program = props.program;
     return(
-        <View style={{height:250,  backgroundColor:COLORS.WHITE, marginLeft:10, marginRight: 10}}>
-            <Image style={{flex: 1,height:200, marginTop:5}} source={{uri:program.img_url}} />
+        <View style={{height:300,  backgroundColor:COLORS.WHITE, marginLeft:10, marginRight: 10}}>
+            <Image style={{flex: 1,height:300, marginTop:5}} source={{uri:program.img_url}} />
             <View style={{flex: 1, marginLeft: 10}}>
                 <Text ellipsizeMode={'tail'} numberOfLines={2} style={{fontSize:16, fontWeight:'bold',marginTop:10}}>{program.title}</Text>
                 <View style={{flex: 1,flexDirection: 'row',marginTop:10}}>

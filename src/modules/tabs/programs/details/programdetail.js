@@ -1,6 +1,6 @@
 import React from 'react';
 import { MainContainer, PageContainer, PageHeader, MemberCard } from '../../../../common/components';
-import { View, Text, Image, FlatList,Button } from 'react-native';
+import { View, Text, Image, FlatList,Button,TouchableOpacity } from 'react-native';
 import { Container, Content } from 'native-base';
 import { BUTTON_TYPE, COLORS, MARGIN_VALUE } from '../../../../common/constants/';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
@@ -22,7 +22,7 @@ const Programdetail = (props) => {
                     onRightPress={()=>console.log("programs right button pressed")}
                     leftButtonType={BUTTON_TYPE.BACK}
                     rightButtonType ={BUTTON_TYPE.DOTS}
-                    back={true} left={true} right={true} title="PROGRAMS"/>
+                    back={true} left={true} right={true} title="Programs"/>
             </PageContainer>
             <Content marginLeft={MARGIN_VALUE.BASE_VALUE} marginRight={MARGIN_VALUE.BASE_VALUE} style={{contentContainerStyle: {flex:1} }}>
                     {/*<SpeakerList speakers={props.program.speaker}/>*/}
@@ -61,7 +61,25 @@ const Programdetail = (props) => {
                         <ProgramDescription description={props.program.description}/>
                         <ProgramPricing />
                     </View>
-                <Button color={COLORS.DARK_BLUE} title={"Register"} onPress={()=>console.log("Register")}/>
+                    <View>
+                        <TouchableOpacity
+            style={{marginRight:40,
+            marginLeft:40,
+            marginTop:10,
+            paddingTop:10,
+            paddingBottom:10,
+            backgroundColor:COLORS.DARK_BLUE,
+            borderRadius:20,
+            borderWidth: 1,
+            borderColor: '#fff'}}
+                    onPress={()=>console.log("Register")}
+                    underlayColor='#fff'>
+            <Text style={{color:'#fff',
+            textAlign:'center',
+            paddingLeft : 10,
+            paddingRight : 10}}>Register</Text>
+                    </TouchableOpacity>
+            </View>
             </Content>    
         </Container>
     );
@@ -118,7 +136,7 @@ const ProgramPricing = (props) => {
     return(
         <View style={{flex:1,marginTop:MARGIN_VALUE.BASE_VALUE,marginBottom: MARGIN_VALUE.TEN}}>
             <View style={{marginLeft:5,flex:3,flexDirection:'row',marginTop:MARGIN_VALUE.FIVE}}>
-                <View style={{height: 20, width: 80}}/>
+            <View style={{height: 30, width: 80}}/>
                 <View style={{ alignItems:'center',flex:1, marginRight:10, backgroundColor:COLORS.DARK_GREY}}>
                         <Text style={{color:COLORS.WHITE}}>
                             Member

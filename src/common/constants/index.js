@@ -10,11 +10,11 @@ export const COLORS = {
 }
 
 export const TAB = {
-    'PROGRAMS' : 'PROGRAMS',
-    'MEMBERS' : 'MEMBERS',
-    'EVENTS' : 'EVENTS',
-    'FORUM' : 'FORUM',
-    'GALLERY' : 'GALLERY',
+    'PROGRAMS' : 'Programs',
+    'MEMBERS' : 'Members',
+    'EVENTS' : 'Events',
+    'FORUM' : 'Forum',
+    'GALLERY' : 'Gallery',
 }
 
 export const DIMENSION_VALUE = {
