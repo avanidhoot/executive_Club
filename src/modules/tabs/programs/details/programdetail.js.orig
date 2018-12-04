@@ -63,6 +63,26 @@ const Programdetail = (props) => {
                     </View>
                     <View>
                         <TouchableOpacity
+<<<<<<< HEAD
+            style={{marginRight:40,
+            marginLeft:40,
+            marginTop:10,
+            paddingTop:10,
+            paddingBottom:10,
+            backgroundColor:COLORS.DARK_BLUE,
+            borderRadius:20,
+            borderWidth: 1,
+            borderColor: '#fff'}}
+                    onPress={()=>console.log("Register")}
+                    underlayColor='#fff'>
+            <Text style={{color:'#fff',
+            textAlign:'center',
+            paddingLeft : 10,
+            paddingRight : 10}}>Register</Text>
+                    </TouchableOpacity>
+            </View>
+            </Content>    
+=======
                             style={{ marginRight:40,
                                 marginLeft:40,
                                 marginTop:10,
@@ -81,6 +101,7 @@ const Programdetail = (props) => {
                         </TouchableOpacity>
                     </View>
             </Content>
+>>>>>>> updates on programm and event for android
         </Container>
     );
 };

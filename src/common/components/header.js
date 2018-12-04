@@ -21,15 +21,15 @@ const Header = (props) => {
         
     return (
         <View style={{flexDirection: 'row',height: headerHeight,backgroundColor:COLORS.DARK_BLUE}}>
-            <Left style={{marginLeft: MARGIN_VALUE.TEN, color:COLORS.WHITE}}>
+            <Left style={{marginLeft: MARGIN_VALUE.FIVE, color:COLORS.WHITE}}>
                 {leftButton}
             </Left>
             <Body>
-                <Text style={{fontSize:16,color:COLORS.WHITE,fontWeight:'bold'}}>
+                <Text style={{fontSize:16,color:COLORS.WHITE}}>
                     {props.title}
                 </Text>
             </Body>    
-            <Right  style={{marginRight: MARGIN_VALUE.TEN, color:COLORS.WHITE}}>
+            <Right  style={{marginRight: MARGIN_VALUE.FIVE, color:COLORS.WHITE}}>
                 {rightButton}
             </Right>
         </View>
