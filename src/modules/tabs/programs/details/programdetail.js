@@ -72,7 +72,7 @@ const Programdetail = (props) => {
                                 borderRadius:20,
                                 borderWidth: 1,
                                 borderColor: '#fff'}}
-                            onPress={()=>console.log("Register")}
+                            onPress={()=>props.navigation.navigate('LOGIN')}
                             underlayColor='#fff'>
                             <Text style={{  color:'#fff',
                                 textAlign:'center',

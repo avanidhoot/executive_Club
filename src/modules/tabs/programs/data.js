@@ -3,7 +3,8 @@ const img_base_url = 'http://www.executivesclub.org'
 export const programs = [
     {
         'id':'001',        
-         'img_url':'https://www.baymillscasinos.com/wp-content/uploads/2016/11/7.jpg',        'title':'Imagine it Forward: Courage, Creativity and the Power of Change',
+         'img_url':'https://www.baymillscasinos.com/wp-content/uploads/2016/11/7.jpg',
+        'title':'Imagine it Forward: Courage, Creativity and the Power of Change',
         'date': 'Wednesday, September 26, 2018  ',
         'time': '11:15 a.m. – 1:15 p.m.',
         'duration':'02 Hours',
@@ -107,16 +108,18 @@ export const details = [
 ]
 
 export const Executive_Member = [
-    {'name':'Leanne Redden',img_url:img_base_url+'/images/default-source/Forum-speakers/redden6-cropped.jpg?sfvrsn=0'},
+    {'name':'Leanne Redden',img_url:"https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg"},
     {'name':'Dorval Carter',img_url:img_base_url+'/images/default-source/Forum-speakers/dorval-carter.jpg?sfvrsn=0'},
     {'name':'Jim Derwinski',img_url:img_base_url+'/images/default-source/Forum-speakers/jimderwinski_jan2018-cropped.jpg?sfvrsn=0'},
     {'name':'Thomas J. (T.J.) Ross',img_url:img_base_url+'/images/default-source/Forum-speakers/ross-cropped.jpg?sfvrsn=0'},
+    {'name':'Chris Williams',img_url:"https://triathlon-images.imgix.net/athlete_thumbs/taylor_spivey_USA.jpg?w=350&amp;h=350&amp;fit=facearea&amp;facepad=2&amp;auto=format"},
+
 ]
 
 export const NonExecutive_Member = [
     {'name':'Chris Williams',img_url:img_base_url+'/images/default-source/Forum-speakers/chris-williams-(root).jpg?sfvrsn=0'},
     {'name':'Helene Gayle ',img_url:img_base_url+'/images/default-source/Signature-Series-Speakers/helene-gayle_400x400.jpg?sfvrsn=0&MaxWidth=250&MaxHeight=&ScaleUp=false&Quality=High&Method=ResizeFitToAreaArguments&Signature=0936EBD4BF7BA899D4E50419920C8B1457AF1DA4'},
-    {'name':'John Canning ',img_url:img_base_url+'/images/default-source/Signature-Series-Speakers/canning_cropped.jpg?sfvrsn=0'},
+    {'name':'John Canning ',img_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI4JuatGP6M5_Q0wYSkx2jAVzJff1FBaPYXV7zFbMngh5RV6J"},
     {'name':'Beth Comstock',img_url:img_base_url+'/images/default-source/Signature-Series-Speakers/beth-comstock_au-pic-cropped.jpg?sfvrsn=0&MaxWidth=300&MaxHeight=&ScaleUp=false&Quality=High&Method=ResizeFitToAreaArguments&Signature=982415D539B6D592CD90203340DE199F32DA3D6A'},
-    {'name':'Maryam Banikarim ',img_url:img_base_url+'/images/default-source/Signature-Series-Speakers/banikarim-side-angle-cropped.jpg?sfvrsn=0&MaxWidth=300&MaxHeight=&ScaleUp=false&Quality=High&Method=ResizeFitToAreaArguments&Signature=1C77A9C8036BBC744E4A5B332D457B4665FD029C'},    
-]
+    {'name':'Maryam Banikarim ',img_url:'https://triathlon-images.imgix.net/athlete_thumbs/taylor_spivey_USA.jpg?w=350&amp;h=350&amp;fit=facearea&amp;facepad=2&amp;auto=format'}
+    ]

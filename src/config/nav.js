@@ -8,8 +8,8 @@ import { createBottomTabNavigator, createStackNavigator  } from 'react-navigatio
 import { Events, Forum, Gallery, Members, Programs, ProgramDetail } from '../modules/tabs';
 import { View,Button,Text} from 'react-native';
 import SplashScreen from 'react-native-smart-splash-screen';
-
-
+import {Login} from '../common/components/Login';
+import {PageStack} from '../common/components/Login'
 const TabIcon=({focused, tintColor, iconName, type}) =>{
     const iconColor = focused ? COLORS.DARK_BLUE : COLORS.GREY
     switch(type) {
@@ -30,8 +30,10 @@ const TabIcon=({focused, tintColor, iconName, type}) =>{
 const ProgramStack = createStackNavigator({
     'PROGRAMS_LIST': {screen: Programs},
     'PROGRAM_DETAIL': {screen: ProgramDetail},
-    'LOGIN':{screen:Login},
-}, { navigationOptions: { header: null }})
+    'LOGIN': {screen: Login}
+    },
+    { navigationOptions: { header: null }}
+    );
 
 ProgramStack.navigationOptions = ({ navigation }) => {
     let tabBarVisible = true;
@@ -43,7 +45,7 @@ ProgramStack.navigationOptions = ({ navigation }) => {
     };
 };
 
-const TabNavs = createBottomTabNavigator({
+export const TabNavs = createBottomTabNavigator({
     'PROGRAMS': { screen: ProgramStack, navigationOptions:{ tabBarIcon: ({focused, tintColor})=> <TabIcon type={TAB.PROGRAMS} focused={focused} tintColor={tintColor} iconName='grid'/> }},
     'MEMBERS': { screen: Members, navigationOptions:{ tabBarIcon: ({focused, tintColor})=> <TabIcon type={TAB.MEMBERS} focused={focused} tintColor={tintColor} iconName='user'/> }},
     'EVENTS': { screen: Events, navigationOptions:{ tabBarIcon: ({focused, tintColor})=> <TabIcon type={TAB.EVENTS} focused={focused} tintColor={tintColor} iconName='calendar'/> }},
@@ -59,37 +61,10 @@ const TabNavs = createBottomTabNavigator({
     }
 })
 
+export const App = createStackNavigator({
+        'LOGIN': {screen: Login},
+        'TABBAR': {screen: TabNavs},
 
-export default class App extends Component{
-    componentDidMount () {
-        // SplashScreen.close(SplashScreen.animationType.scale, 850, 500)
-        //SplashScreen.close({
-          //  animationType: SplashScreen.animationType.fade,
-            //duration: 550,
-            //delay: 500,
-            //height:100,
-            //width:100
-        //})
-    }
-    render() {
-        return (
-            <View style={{flex:1}}>
-                <TabNavs/>
-            </View>
-        );
-    }
-}
-
-class Login extends Component{
-    handleSubmit(){
-        this.props.navigation.navigate('PROGRAM')
-    }
-    render(){
-        return(
-            <View>
-                <Text>Login</Text>
-                <Button title={"Skip"} onPress={() => this.handleSubmit() }/>
-            </View>
-        )
-    }
-}
+    },
+    { navigationOptions: { header: null }}
+);

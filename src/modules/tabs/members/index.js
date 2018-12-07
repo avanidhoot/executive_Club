@@ -39,7 +39,7 @@ class Members extends Component {
                             <Text style={{textAlign:'center', color: this.state.activeSegment == SEGMENT.MEMBERS ? COLORS.WHITE : COLORS.DARK_BLUE}}>{SEGMENT.MEMBERS}</Text>
                         </Button>
                 </Segment>
-                <Content style={{marginHorizontal: MARGIN_VALUE.BASE_VALUE, marginTop: MARGIN_VALUE.BASE_VALUE}}>
+                <Content style={{marginTop: MARGIN_VALUE.BASE_VALUE,alignSelf:'center'}}>
                     {list}
                 </Content>
             </MainContainer>

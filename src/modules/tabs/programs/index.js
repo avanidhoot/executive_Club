@@ -27,7 +27,7 @@ class Programs extends Component {
     const prg = Array.isArray(this.state.programs) && this.state.programs.length > 0 
                 ? <FlatList
                     showsVerticalScrollIndicator={false}
-                    style={{marginHorizontal: MARGIN_VALUE.FIVE}}
+                    style={{marginHorizontal: MARGIN_VALUE.FIVE, marginBottom: 80}}
                     keyExtractor ={ (item, index) => item.id}
                     ItemSeparatorComponent={()=><View style={{height: MARGIN_VALUE.FIVE}}></View>}
                     data={this.state.programs}
@@ -59,9 +59,11 @@ class Programs extends Component {
 const ProgramCard = (props) => {
     const program = props.program;
     return(
-        <View style={{height:300,  backgroundColor:COLORS.WHITE, marginLeft:10, marginRight: 10}}>
-            <Image style={{flex: 1,height:300, marginTop:5}} source={{uri:program.img_url}} />
-            <View style={{flex: 1, marginLeft: 10}}>
+        <View style={{height:290, padding: 5,backgroundColor:COLORS.WHITE, marginLeft:10, marginRight: 10}}>
+            <View style={{height:190}}>
+                <Image style={{flex: 1}} source={{uri:program.img_url}} />
+            </View>
+                <View style={{flex: 1, marginLeft: 10}}>
                 <Text ellipsizeMode={'tail'} numberOfLines={2} style={{fontSize:16, fontWeight:'bold',marginTop:10}}>{program.title}</Text>
                 <View style={{flex: 1,flexDirection: 'row',marginTop:10}}>
                     <Text style={{fontSize:14, color:COLORS.GREY,fontWeight:'bold'}}>On {program.date}</Text>
