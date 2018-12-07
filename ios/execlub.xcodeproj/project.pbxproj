@@ -43,7 +43,8 @@
 		5A161D5D55B04EEEAC0F6142 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B490CE6C9E784D21823525F1 /* SimpleLineIcons.ttf */; };
 		60B33CAE3BCE4C11B39B4F2A /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22EF1D997C3042D2A95C826F /* Ionicons.ttf */; };
 		63641C3C91904B549BE75A03 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8053797B744FD1B50FF748 /* libRNVectorIcons.a */; };
-		78B24C9B21B17253005C83A0 /* SplashScreenResource in Resources */ = {isa = PBXBuildFile; fileRef = 78B24C9A21B17253005C83A0 /* SplashScreenResource */; };
+		78D5376621B91C4D00B72651 /* ExecClubLScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D5376521B91C4D00B72651 /* ExecClubLScreen.storyboard */; };
+		78D5376A21B91FC200B72651 /* Splash Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 78D5376921B91FC200B72651 /* Splash Screen.png */; };
 		82154F852D34491784DFD774 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 909AAA85C6374045B36582AF /* Feather.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8B76176E64574BD383C8C807 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01EE1BF5D8914CF5A076F0AF /* Roboto.ttf */; };
@@ -375,8 +376,9 @@
 		6EAF209CB8DA43C7A041724D /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
 		7151CF37684A46838807D4AA /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		7478BC6778F843C48000CD39 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
-		78B24C9A21B17253005C83A0 /* SplashScreenResource */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SplashScreenResource; path = "../node_modules/react-native-smart-splash-screen/ios/SplashScreenResource"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		78D5376521B91C4D00B72651 /* ExecClubLScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExecClubLScreen.storyboard; sourceTree = "<group>"; };
+		78D5376921B91FC200B72651 /* Splash Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash Screen.png"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		909AAA85C6374045B36582AF /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		9B9BC48E7A91468B98787616 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
@@ -528,7 +530,9 @@
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				78D5376521B91C4D00B72651 /* ExecClubLScreen.storyboard */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				78D5376921B91FC200B72651 /* Splash Screen.png */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -657,7 +661,6 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				78B24C9A21B17253005C83A0 /* SplashScreenResource */,
 				13B07FAE1A68108700A75B9A /* execlub */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* execlubTests */,
@@ -1152,7 +1155,6 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				C828F213F7DE47219A918BD3 /* Entypo.ttf in Resources */,
 				DDFA5DA140B341ACA1D2FC94 /* EvilIcons.ttf in Resources */,
-				78B24C9B21B17253005C83A0 /* SplashScreenResource in Resources */,
 				82154F852D34491784DFD774 /* Feather.ttf in Resources */,
 				F9F85F95646D47C6A1093C70 /* FontAwesome.ttf in Resources */,
 				D7577891A34645EB94393E53 /* Foundation.ttf in Resources */,
@@ -1160,11 +1162,13 @@
 				43F8143BD3174B82B181E9C1 /* MaterialCommunityIcons.ttf in Resources */,
 				0E3B4A2015DD492A89C2816C /* MaterialIcons.ttf in Resources */,
 				97161EAB281C40818F280280 /* Octicons.ttf in Resources */,
+				78D5376A21B91FC200B72651 /* Splash Screen.png in Resources */,
 				26F0A01B8A5C42D59F336A4C /* Roboto_medium.ttf in Resources */,
 				8B76176E64574BD383C8C807 /* Roboto.ttf in Resources */,
 				A55F4DF30E074710A8E910A0 /* rubicon-icon-font.ttf in Resources */,
 				5A161D5D55B04EEEAC0F6142 /* SimpleLineIcons.ttf in Resources */,
 				96997FF1F3904BC48F94E39F /* Zocial.ttf in Resources */,
+				78D5376621B91C4D00B72651 /* ExecClubLScreen.storyboard in Resources */,
 				E45CEED6867B40A58C40C44F /* FontAwesome5_Brands.ttf in Resources */,
 				421758E3650D407BBC82F99F /* FontAwesome5_Regular.ttf in Resources */,
 				310B7C409482482199832BCE /* FontAwesome5_Solid.ttf in Resources */,
@@ -1346,6 +1350,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.katalysttech.execlub;
 				PRODUCT_NAME = execlub;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1370,6 +1375,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.katalysttech.execlub;
 				PRODUCT_NAME = execlub;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
